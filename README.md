@@ -1,33 +1,82 @@
-# Deep-Flow-Optimizer: Adaptive Signal Control with Deep RL
+# Deep Flow Optimizer
 
-**Deep-Flow-Optimizer** is an intelligent traffic management system built to solve complex urban congestion and bridge spillback. Utilizing **Deep Q-Learning (DQN)** and the **SUMO** simulator, this project demonstrates how AI agents can autonomously manage signal phases based on real-time lane-level data.
+> 🧠 Deep RL framework for urban traffic signal optimization and spillback mitigation using SUMO
 
+![Language](https://img.shields.io/badge/Language-Python-blue?style=flat-square)
+![Stars](https://img.shields.io/github/stars/Onabanjomicheal/Deep-Flow-Optimizer?style=flat-square&color=yellow)
+![Forks](https://img.shields.io/github/forks/Onabanjomicheal/Deep-Flow-Optimizer?style=flat-square&color=green)
+![Last Commit](https://img.shields.io/github/last-commit/Onabanjomicheal/Deep-Flow-Optimizer?style=flat-square)
 
+---
 
-## 🛠 Project Overview
-Urban intersections often suffer from downstream "spillback" that causes total network gridlock. This project benchmarks three control strategies:
-1. **Fixed-Time:** Traditional rigid signal cycles.
-2. **Tabular Q-Learning:** An RL agent using discrete state-mapping.
-3. **Deep Q-Network (DQN):** A neural-network-based agent for high-dimensional state spaces.
+## 📌 Overview
 
-## 📈 Final Performance Benchmarks
-| Metric | Fixed-Time | Q-Learning | Deep Q-Network |
-| :--- | :--- | :--- | :--- |
-| **Total Throughput** | 154 veh | 157 veh | **165 veh** |
-| **Network Delay** | 381,959s | **283,253s** | 472,157s |
-| **CO2 Impact** | Baseline | **-1.4% (Saving)** | +5.3% (Learning Phase) |
+A Deep Reinforcement Learning (DQN) framework for optimizing urban traffic signal timing and mitigating queue spillback at intersections. Uses SUMO for microsimulation and TraCI for real-time agent-environment interaction.
 
-## 📊 Visual Results
-### Traffic Load & Queue Management
-![Traffic Load](./Results/QL/QL_Traffic_Load.png)
+**Tech Stack:** `Python` `SUMO` `DQN` `Deep RL` `TraCI` `Traffic Optimization`
 
-### System Reward (Learning Curve)
-![System Score](./Results/DQL/DQL_System_Score.png)
+---
 
-## 🚀 Deployment
-1. Install [SUMO](https://www.eclipse.org/sumo/).
-2. Install Python dependencies: `pip install -r requirements.txt`.
-3. Run the DQL agent: `python DQL_Agent.py`.
+## 🚀 Getting Started
 
-## 📝 Conclusion
-While the **DQN agent** maximized vehicle throughput (165 arrived), the **Tabular Q-Learning** agent achieved the highest overall efficiency with a **25.8% reduction in delay**. This suggests that for single-intersection optimization, lower-dimensional state mappings converge more effectively within short training windows.
+### Prerequisites
+
+```bash
+pip install -r requirements.txt
+```
+
+> Requires **Python 3.8+**
+
+### Installation
+
+```bash
+git clone https://github.com/Onabanjomicheal/Deep-Flow-Optimizer.git
+cd Deep-Flow-Optimizer
+pip install -r requirements.txt
+```
+
+### Run
+
+```bash
+python main.py
+```
+
+---
+
+## 🗂️ Project Structure
+
+```
+Deep-Flow-Optimizer/
+├── README.md
+├── requirements.txt
+├── main.py
+├── data/              # Input datasets
+├── notebooks/         # Jupyter notebooks
+└── results/           # Outputs, plots, metrics
+```
+
+---
+
+## 📊 Results
+
+After running the project, outputs and visualisations are saved to the `results/` directory.
+
+---
+
+## 📬 Author
+
+**Onabanjo Michael Oluwatobi**
+- 📧 [Onabanjomicheal01@gmail.com](mailto:Onabanjomicheal01@gmail.com)
+- 💼 [LinkedIn](https://www.linkedin.com/in/micheal-onabanjo)
+- 🐦 [Twitter / X](https://twitter.com/onabanjomico)
+- 🐙 [GitHub](https://github.com/Onabanjomicheal)
+
+---
+
+## ⭐ Support
+
+If this project helped you, consider giving it a **star** ⭐
+
+---
+
+*Part of a portfolio focused on intelligent transportation systems, machine learning, and data science.*
